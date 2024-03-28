@@ -6,8 +6,9 @@ interface BookProps {
 
 const Book = ({ isbn, title }: BookProps) => {
   return (
-    <div>
-      <p>{title}</p>
+    <div className="book">
+      <p>Title: {title}</p>
+      <p>ISBN: {isbn || "Unknown ISBN"}</p>
     </div>
   );
 };
