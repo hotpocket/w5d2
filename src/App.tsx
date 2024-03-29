@@ -1,35 +1,30 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+// import { useState, useEffect } from "react";
+import Layout from "./Pages/Layout/Layout.tsx";
+
+// w3 schools
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import axios from "axios";
 import "./App.css";
-import Book from "./Components/Book/Book.tsx";
-import bookData from "./Data/videos.json";
+import Book from "./Pages/Book/Book.tsx";
+import Website from "./Pages/Website/Website.tsx";
+import Home from "./Pages/Home/Home.tsx";
+import Video from "./Pages/Video/Video.tsx";
+
+// use react-router-dom to create a single page application
 
 function App() {
-  useEffect(
-    () => {
-      console.log("App component mounted!");
-      // axios
-      //   .get("./assets/Data/videos.json")
-      //   .then((response) => {
-      //     console.log(response.data);
-      //   })
-      //   .catch((error) => {
-      //     console.error("There was an error!", error);
-      //   });
-    },
-    [] // if this array is missing we will get an infinite loop
-  ); // only run once - historically was componentWillMount
-  const [books, setBooks] = useState({ ...bookData });
   return (
-    <>
-      {console.log(books)}
-      <h1>My Super Awesome React Resources!</h1>
-      <p>Here is a site to show you all of the cool info I like.</p>
-      <div>Here is my list of Books</div>
-      {books["Videos"].map((book) => {
-        return <Book key={book.isbn} title={book.Title} />;
-      })}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="book" element={<Book />} />
+          <Route path="website" element={<Website />} />
+          <Route path="video" element={<Video />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+
 interface BookProps {
   title: string;
   isbn: string;
@@ -6,9 +7,11 @@ interface BookProps {
 
 const Book = ({ isbn, title }: BookProps) => {
   return (
-    <div className="book">
-      <p>Title: {title}</p>
-      <p>ISBN: {isbn || "Unknown ISBN"}</p>
+    <div>
+      isbn: {isbn}
+      <br />
+      title: {title}
+      <br />
     </div>
   );
 };
