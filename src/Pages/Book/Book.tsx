@@ -10,7 +10,7 @@ const BookPage = () => {
   useEffect(
     () => {
       console.log("App component mounted!");
-      // myBooks = go fetch some data from some api... and load it here
+      // myBooks = go fetch (not axios) some data from some api... and load it here
       // setBooks(myBooks);
     },
     [] // if this array is missing we will get an infinite loop

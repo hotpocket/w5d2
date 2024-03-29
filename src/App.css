@@ -1,5 +1,4 @@
-/* a three column layout */
-.eduResources {
+/* .eduResources {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
@@ -30,7 +29,6 @@
   align-items: center;
 }
 
-/* Center the whole web page */
 html, body {
   height: 100%;
 }
@@ -43,4 +41,4 @@ html {
 body, p, h1 {
   display: table-cell;
   vertical-align: middle;
-}
+} */
