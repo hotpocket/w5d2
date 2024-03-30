@@ -2,22 +2,21 @@ import { Outlet, Link } from "react-router-dom";
 import "./Layout.css";
 //www.w3schools.com/howto/howto_js_topnav.asp
 
-function myTypeOf(someThing) {
-  return new Object().toString.call(someThing).match(/\[object (.*?)\]/)[1];
-}
+// function myTypeOf(someThing) {
+//   return new Object().toString.call(someThing).match(/\[object (.*?)\]/)[1];
+// }
 
 const Layout = () => {
-  let lastTarget = null; //: HTMLAnchorElement;
+  let lastTarget = null;
 
   const dostuff = (e) => {
     if (lastTarget !== null) {
       lastTarget.className = "";
     }
-    console.log(e);
     e.target.className = "active";
     lastTarget = e.target;
-    // e.preventDefault();
   };
+
   return (
     <>
       <nav className="topnav">
