@@ -1,5 +1,3 @@
-import React from "react";
-
 import { BookType } from "../../lib/types";
 
 const Book = ({ title, isbn }: BookType) => {
