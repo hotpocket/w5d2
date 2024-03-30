@@ -7,9 +7,11 @@ import "./Layout.css";
 // }
 
 const Layout = () => {
-  let lastTarget: any = null;
+  let lastTarget: any = null; //eslint-disable-line @typescript-eslint/no-explicit-any
 
-  const dostuff = (e: any) => {
+  const dostuff = (
+    e: any /* eslint-disable-line @typescript-eslint/no-explicit-any */
+  ) => {
     if (lastTarget !== null) {
       lastTarget.className = "";
     }
