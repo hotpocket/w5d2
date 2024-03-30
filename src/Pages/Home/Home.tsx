@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function Home() {
-  return <div>I am awesome!</div>;
+  return (
+    <div>
+      This is my homepage. It does nothing. Click other sources to see things.
+    </div>
+  );
 }

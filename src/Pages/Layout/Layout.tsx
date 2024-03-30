@@ -35,6 +35,10 @@ const Layout = () => {
           </Link>
         </div>
       </nav>
+
+      <div className="title">My Super Awesome React Resources!</div>
+      <div className="subtitle">Inspect the awesomeness and be awed!</div>
+      <div className="eduResources"></div>
       <Outlet />
     </>
   );
