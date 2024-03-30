@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-interface WebsiteType {
+export interface WebsiteType {
   name: string;
   url: string;
 }

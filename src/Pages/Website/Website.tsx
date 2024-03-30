@@ -1,24 +1,30 @@
 // import React from "react";
 import { useState, useEffect } from "react";
 import Website from "../../Components/Website/Website";
+import { WebsiteType } from "../../lib/types";
+import "./Website.css";
 
 const WebsitePage = () => {
-  const [websites, setWebsites] = useState([]);
+  const [websites, setWebsites] = useState<Array<WebsiteType>>([]);
 
-  useEffect(() => {
+  const fetchWebsites = async () => {
     try {
-      const bookUrl =
-        "https://raw.githubusercontent.com/hotpocket/w5d2/main/src/Data/websites.json";
-      fetch(bookUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          setWebsites(data);
-        });
+      const response = await fetch(
+        "https://raw.githubusercontent.com/hotpocket/w5d2/main/src/Data/websites.json"
+      );
+      const data = await response.json();
+      if (data) {
+        setWebsites(data);
+      }
     } catch (error) {
       console.error("Error:", error);
     } finally {
       /* runs code regardless of success or failure */
     }
+  };
+
+  useEffect(() => {
+    fetchWebsites();
   }, []);
 
   return (

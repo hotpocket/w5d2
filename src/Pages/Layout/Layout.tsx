@@ -7,9 +7,9 @@ import "./Layout.css";
 // }
 
 const Layout = () => {
-  let lastTarget = null;
+  let lastTarget: any = null;
 
-  const dostuff = (e) => {
+  const dostuff = (e: any) => {
     if (lastTarget !== null) {
       lastTarget.className = "";
     }

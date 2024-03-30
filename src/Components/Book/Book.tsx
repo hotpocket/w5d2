@@ -1,11 +1,8 @@
 import React from "react";
 
-interface BookProps {
-  title: string;
-  isbn: string;
-}
+import { BookType } from "../../lib/types";
 
-const Book = ({ isbn, title }: BookProps) => {
+const Book = ({ title, isbn }: BookType) => {
   return (
     <div>
       isbn: {isbn}
