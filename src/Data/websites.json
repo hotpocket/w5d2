@@ -1,4 +1,11 @@
 [
   {"name": "Hacker news", "url": "news.ycombinator.com"},
-  {"name": "Physics news", "url":"phys.org"}
+  {"name": "Physics news", "url":"phys.org"},
+  {"name": "LinkedIn Redux vs Redux toolkit", "url":"https://www.linkedin.com/pulse/redux-vs-toolkit-choosing-right-state-management-solution-birta/"},
+  {"name": "React Redux Homepage", "url":"https://react-redux.js.org/"},
+  {"name": "Flux Architecture", "url":"https://www.freecodecamp.org/news/an-introduction-to-the-flux-architectural-pattern-674ea74775c9/"},
+  {"name": "Thinking in React", "url":"https://react.dev/learn/thinking-in-react"},
+  {"name": "Redux Essentials", "url":"https://redux.js.org/tutorials/essentials/part-1-overview-concepts"},
+  {"name": "RTK Query Basics (redux)", "url":"https://egghead.io/courses/rtk-query-basics-query-endpoints-data-flow-and-typescript-57ea3c43"},
+  {"name": "VS Code Shortcuts", "url":"https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf"},
 ]
